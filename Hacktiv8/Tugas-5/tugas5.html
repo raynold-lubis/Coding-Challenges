@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas Mandiri Sesi 5</title>
+  <style>
+   h1 {
+    text-align: center;
+   }
+   body {
+    background-color: salmon;
+    font-family: "Courier New", Courier, monospace;
+   }
+   div {
+    background-color: white;
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+   }
+   button {
+    background-color: blue;
+    color: white;
+    border-radius: 10%;
+   }
+   button:hover {
+    background-color: white;
+    color: blue;
+   }
+  </style>
+ </head>
+ <body>
+  <div>
+   <h1>Tugas Mandiri Sesi 5</h1>
+   <label for="">Pesan : </label>
+   <input type="text" id="pesan" />
+
+   <label for="">Berapa kali : </label>
+   <input type="number" id="jumlah" />
+
+   <button onclick="cetak()">Cetak!</button>
+   <ol id="hasil"></ol>
+  </div>
+  <script>
+   function cetak() {
+    let a = document.getElementById("jumlah").value;
+    let b = document.getElementById("pesan").value;
+    let text = "";
+    for (let i = 0; i < a; i++) {
+     console.log(i);
+     text += "<li>" + b + "</li>";
+    }
+    document.getElementById("hasil").innerHTML = text;
+   }
+  </script>
+ </body>
+</html>

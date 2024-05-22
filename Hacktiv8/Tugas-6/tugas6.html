@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belajar Animasi Warna</title>
+ </head>
+ <body>
+  <p id="text1"></p>
+  <p id="text2"></p>
+  <p id="text3"></p>
+
+  <script>
+   let text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolorum
+      voluptate perferendis labore numquam iusto voluptatibus nulla beatae,
+      deserunt fuga nobis harum repellat, aliquam at ut necessitatibus non
+      molestiae atque.`;
+
+   let check = /lorem/g;
+
+   console.log(check);
+
+   if (check) {
+    animasi();
+   }
+
+   //   function animasi
+   function animasi() {
+    let text1 = document.getElementById("text1");
+    let text2 = document.getElementById("text2");
+    let text3 = document.getElementById("text3");
+
+    text1.innerHTML = text;
+    text2.innerHTML = text;
+    text3.innerHTML = text;
+
+    function resetColor() {
+     text1.style.color = "black";
+     text2.style.color = "black";
+     text3.style.color = "black";
+    }
+
+    setInterval(() => {
+     text1.style.color = "red";
+     text2.style.color = "green";
+     text3.style.color = "blue";
+    }, 1000);
+
+    setTimeout(() => {
+     resetColor();
+    }, 2000);
+   }
+  </script>
+ </body>
+</html>
